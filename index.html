@@ -12,13 +12,13 @@
 
         <h4 id="playlist-title">Reprodutor de Música</h4>
         <img id="cover" src="/images/Casa.png"></img>
-        
+        <audio id="audio" src="/songs/CASA — GERAÇÃO 19 (SINGLE OFICIAL) __ COLO DE DEUS [O03F9XB4vVU].mp3"></audio>
         <div id = "below-cover">
             <div id="inf-music">
                 <div id="song-name">Nome da musica</div>
                 <div id="band-name" class="ligth-color">Nome da banda</div>
             </div>
-            <div id="like" class="button ligth-color"><i class="bi bi-heart"></i></div>
+            <button id="like" class="button ligth-color"><i class="bi bi-heart"></i></button>
         </div>
         <div id="progress-bar">
             <div id="current-progress">
@@ -26,16 +26,17 @@
             </div>
         </div>
         <div id = "buttons">
-            <div id="shuffle" class="button"><i class="bi bi-shuffle"></i></div>
-            <div id="back" class="button button-navigate"><i class="bi bi-skip-start-fill"></i>
-            </div>
-            <div id="pause" class="button button-biggest"><i class="bi bi-pause-circle-fill"></i>
-            </div>
-            <div id="skip" class="button button-navigate"><i class="bi bi-skip-end-fill"></i>
-            </div>
-            <div id="repeat" class="button"><i class="bi bi-repeat-1"></i>
-            </div>
+            <button id="shuffle" class="button"><i class="bi bi-shuffle"></i></button>
+            <button id="back" class="button button-navigate"><i class="bi bi-skip-start-fill"></i>
+            </button>
+            <button id="play" class="button button-biggest"><i class="bi bi-play-circle-fill"></i>
+            </button>
+            <button id="skip" class="button button-navigate"><i class="bi bi-skip-end-fill"></i>
+            </button>
+            <button id="repeat" class="button"><i class="bi bi-repeat-1"></i>
+            </button>
         </div>
     </div>
+    <script src="/script.js"></script>
 </body>
 </html>
