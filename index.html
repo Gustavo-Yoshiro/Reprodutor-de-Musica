@@ -8,26 +8,33 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h4>Reprodutor de Música</h4>
-    <img src="/images/Casa.png"></img>
+    <div id="music-container">
 
-    <div id = "below-cover">
-        <div id="inf-musica">
-            <div>Nome da musica</div>
-            <div>Nome da banda</div>
+        <h4 id="playlist-title">Reprodutor de Música</h4>
+        <img id="cover" src="/images/Casa.png"></img>
+        
+        <div id = "below-cover">
+            <div id="inf-music">
+                <div id="song-name">Nome da musica</div>
+                <div id="band-name" class="ligth-color">Nome da banda</div>
+            </div>
+            <div id="like" class="button ligth-color"><i class="bi bi-heart"></i></div>
         </div>
-        <div id="like" class="button"><i class="bi bi-heart"></i></div>
-    </div>
-    <div>Barra de Progresso</div>
-    <div id = "buttons">
-        <div id="shuffle" class="button"><i class="bi bi-shuffle"></i></div>
-        <div id="back" class="button button-navigate"><i class="bi bi-skip-start-fill"></i>
+        <div id="progress-bar">
+            <div id="current-progress">
+
+            </div>
         </div>
-        <div id="pause" class="button button-biggest"><i class="bi bi-pause-circle-fill"></i>
-        </div>
-        <div id="skip" class="button button-navigate"><i class="bi bi-skip-end-fill"></i>
-        </div>
-        <div id="repeat" class="button"><i class="bi bi-repeat-1"></i>
+        <div id = "buttons">
+            <div id="shuffle" class="button"><i class="bi bi-shuffle"></i></div>
+            <div id="back" class="button button-navigate"><i class="bi bi-skip-start-fill"></i>
+            </div>
+            <div id="pause" class="button button-biggest"><i class="bi bi-pause-circle-fill"></i>
+            </div>
+            <div id="skip" class="button button-navigate"><i class="bi bi-skip-end-fill"></i>
+            </div>
+            <div id="repeat" class="button"><i class="bi bi-repeat-1"></i>
+            </div>
         </div>
     </div>
 </body>
