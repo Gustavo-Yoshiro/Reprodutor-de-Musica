@@ -6,6 +6,9 @@ const play = document.getElementById('play');
 const bandName = document.getElementById('band-name');
 const skip = document.getElementById('skip');
 const back = document.getElementById('back');
+const currentProgressBar = document.getElementById('current-progress');
+const progressContainer = document.getElementById('progress-container');
+
 
 let isPlaying = false;
 
@@ -73,8 +76,22 @@ function nextSong(){
     loadSong();
     playSong();
 }
+
+function uptadeProgressBar(){
+    const barWidth = (song.currentTime/song.duration) *100;
+    currentProgressBar.style.setProperty('--progress', `${barWidth}%`);
+}
+
+function jumpTo(event){
+    const width = progressContainer.clientWidth;
+    const clickPosition = event.offsetX;
+    const jumpToTime = (clickPosition/width)*song.duration;
+    song.currentTime = jumpToTime;
+}
 loadSong();
 
 play.addEventListener('click',playPauseDecider);
-back.addEventListener('click',previousSong)
-skip.addEventListener('click',nextSong)
+back.addEventListener('click',previousSong);
+skip.addEventListener('click',nextSong);
+song.addEventListener('timeupdate',uptadeProgressBar);
+progressContainer.addEventListener('click',jumpTo);
