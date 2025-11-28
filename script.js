@@ -8,7 +8,7 @@ const skip = document.getElementById('skip');
 const back = document.getElementById('back');
 const currentProgressBar = document.getElementById('current-progress');
 const progressContainer = document.getElementById('progress-container');
-const suffleButton = document.getElementById('suffle');
+const shuffleButton = document.getElementById('shuffle');
 
 
 let isPlaying = false;
@@ -97,7 +97,7 @@ function suffleArray(preShuffleArray){
     let currentIndex = size - 1;
     while (currentIndex > 0) {
         let randonIndex = Math.floor(Math.random()*size);
-        let aux = preShuffleArray[currentIndex]
+        let aux = preShuffleArray[currentIndex];
         preShuffleArray[currentIndex] = preShuffleArray[randonIndex];
         preShuffleArray[randonIndex] = aux;
         currentIndex -= 1;
@@ -109,11 +109,11 @@ function shuffleButtonClicked(){
     if(isShuffled === false){
         isShuffled = true;
         suffleArray(sortedPlaylist);
-        suffleButton.classList.add('button-active');
+        shuffleButton.classList.add('button-active');
     }else {
         isShuffled = false;
-        sortedPlaylist = [originalPlaylist];
-        suffleButton.classList.remove('button-active');
+        sortedPlaylist = [...originalPlaylist];
+        shuffleButton.classList.remove('button-active');
     }
 }
 loadSong();
@@ -123,4 +123,4 @@ back.addEventListener('click',previousSong);
 skip.addEventListener('click',nextSong);
 song.addEventListener('timeupdate',uptadeProgressBar);
 progressContainer.addEventListener('click',jumpTo);
-suffleButton.addEventListener('click',shuffleButtonClicked)
+shuffleButton.addEventListener('click',shuffleButtonClicked);
